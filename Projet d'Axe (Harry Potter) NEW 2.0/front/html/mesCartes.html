@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/booster.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Mes Cartes Personnelles</title>
+</head>
+<body>
+
+<div class="profil-page">
+    <div class="left-menu">
+        <nav>
+            <ul>
+                <li><h3>Mon compte</h3></li>
+                <a href="profil.html" class="myinfo">Mes informations</a>
+                <a href="#">Mes cartes personelles</a>
+                <a href="openBooster.html">Ouvrir un booster</a>
+                <a href="index.html" class="logout">Déconnexion</a>
+                <li><h3>Menu</h3></li>
+                <a href="homePage2.html">Accueil</a>
+                <a href="collection2.html">Collection</a>
+                <a href="FAQ2.html">À propos de nous</a>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header">
+        <div class="welcome">
+            <h1>Bienvenue !</h1>
+            <h2>Content de vous revoir !</h2>
+        </div>
+        
+        <div class="header-logout">
+            <a href="index.html">Déconnexion</a>
+        </div>
+    </div>
+
+    <div class="booster">
+        <h2>Mes cartes Personnelles :</h2>
+        <div class="carte"></div>
+    </div>
+
+    <div class="modal-place">
+        <button id="openModal">Echanger</button>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-container">
+            <h2>Echanger une carte</h2>
+            <p>Entrez le nom de la carte</p>
+            <input type="text" placeholder="Ex : Harry Potter">
+            <p>Nom de la personne</p>
+            <input type="text" placeholder="Ex : David">
+            <button id="send-success">Envoyer la demande d'échange</button>
+            <div class="closemodal-margintop">
+                <button id="closeModal">X</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <footer>
+        <div class="footer-rights">
+            <p>© 2024 Harry Potter Project</p>
+        </div>
+    </footer>
+
+    <script src="../js/modal.js"></script>
+    <script src="../js/inventaire.js"></script>
+
+</body>
+</html>

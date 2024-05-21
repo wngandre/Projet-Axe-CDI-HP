@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/booster.css">
+    <link rel="stylesheet" href="../css/hp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Mes Cartes Personnelles</title>
+</head>
+<body>
+
+<div class="profil-page">
+    <div class="left-menu">
+        <nav>
+            <ul>
+                <li><h3>Mon compte</h3></li>
+                <a href="profil.html" class="myinfo">Mes informations</a>
+                <a href="mesCartes.html">Mes cartes personelles</a>
+                <a href="openBooster.html">Ouvrir un booster</a>
+                <a href="index.html" class="logout">Déconnexion</a>
+                <li><h3>Menu</h3></li>
+                <a href="index.html">Accueil</a>
+                <a href="collection.html">Collection</a>
+                <a href="FAQ.html">À propos de nous</a>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header">
+        <div class="welcome">
+            <h1>Bienvenue !</h1>
+            <h2>Content de vous revoir !</h2>
+        </div>
+        
+        <div class="header-logout">
+            <a href="index.html">Déconnexion</a>
+        </div>
+    </div>
+
+    <div class="containercard">
+
+    <div class="booster">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 12H4v8a2 2 0 0 0 2 2h5V12H5zm13 0h-5v10h5a2 2 0 0 0 2-2v-8h-2zm.791-5A4.92 4.92 0 0 0 19 5.5C19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.404 3.085C11.407 3.57 10.269 2 8.5 2 6.57 2 5 3.57 5 5.5c0 .596.079 1.089.209 1.5H2v4h9V9h2v2h9V7h-3.209zM7 5.5C7 4.673 7.673 4 8.5 4c.888 0 1.714 1.525 2.198 3H8c-.374 0-1 0-1-1.5zM15.5 4c.827 0 1.5.673 1.5 1.5C17 7 16.374 7 16 7h-2.477c.51-1.576 1.251-3 1.977-3z"></path></svg>
+        <h2>Ouvrir un booster</h2>
+        <p>Vous avez un boosters à ouvrir !</p>
+        <div class="boosterOp">
+            <button id="openBooster" onclick="draw()">Déballer</button>
+        </div>
+    </div>
+
+    <div class="carte"></div>
+</div>
+
+    <div class="modal-place">
+        <button id="openModal">Echanger</button>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-container">
+            <h2>Echanger une carte</h2>
+            <p>Entrez le nom de la carte</p>
+            <input type="text" placeholder="Ex : Harry Potter">
+            <p>Nom de la personne</p>
+            <input type="text" placeholder="Ex : David">
+            <button id="send-success">Envoyer la demande d'échange</button>
+            <div class="closemodal-margintop">
+                <button id="closeModal">X</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <footer>
+        <div class="footer-rights">
+            <p>© 2024 Harry Potter Project</p>
+        </div>
+    </footer>
+
+    <script src="../js/modal.js"></script>
+    <script src="../js/draw.js"></script>
+    <script src="../js/booster.js"></script>
+</body>
+</html>

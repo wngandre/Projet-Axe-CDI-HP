@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/single-hp.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="background-container">
+        <header>
+            <nav class="navbar">
+                <img class="menu-burger" src="../img/menu-btn.png" alt="menu-burger">
+              </nav>
+    
+            <div class="header-center">
+              <nav class="main-header">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="collection.html">Collection</a></li>
+                        <li><img class="logo" src="../img/logo.png" alt="logo" width="310"></li>
+                        <li><a href="FAQ.html">À propos de nous</a></li>
+                        <li><a href="sign-in.html">Connexion</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <div id="character"></div>
+
+
+    <footer>
+        <div class="footer-rights">
+            <p>© 2024 Harry Potter Project</p>
+        </div>
+    </footer>
+
+    <script>
+        function fetchCharacter() {
+            let url = window.location.search
+            let slug = new URLSearchParams(url).get('slug')
+            return fetch('https://hp-api.lainocs.fr/characters/' + slug)
+                .then((response) => response.json())
+        }
+
+        async function displayCharacter() {
+            const data = await fetchCharacter()
+            document.querySelector('#character').innerHTML = `
+                <h1 class="name">${data.name}</h1>
+                <img class="characters" src="${data.image}" alt="${data.name}">
+                <p class="desc-character">Eyes : ${data.eyes}</p>
+                <p class="desc-character">Hairs : ${data.hairs}</p>
+                <p class="desc-character">${data.birthday}</p>
+                <p class="desc-character">Patronus : ${data.patronus}</p>
+                <p class="desc-character">Role : ${data.role}</p>
+                <p class="desc-character">House : ${data.house}</p>
+                <p class="desc-character">Actor : ${data.actor}</p>
+                <a class="back-btn" href="collection.html">Back</a>
+            `
+        }
+
+        displayCharacter()
+    </script>
+
+    <script src="../js/sidenav.js"></script>
+    <script src="../js/leds.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/sign-up.css">
+    <title>Inscription</title>
+</head>
+<body>
+    <div class="background-container">
+        <header>
+            <nav class="navbar">
+                <img class="menu-burger" src="../img/menu-btn.png" alt="menu-burger">
+              </nav>
+    
+            <div class="header-center">
+              <nav class="main-header">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="collection.html">Collection</a></li>
+                        <li><img class="logo" src="../img/logo.png" alt="logo" width="310"></li>
+                        <li><a href="FAQ.html">À propos de nous</a></li>
+                        <li><a href="sign-in.html">Connexion</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+    <section id="form">
+        <form action="" method="post" enctype="multipart/form-data">
+            <h1>Inscription</h1>
+
+            <hr>
+
+            <div>
+                <label for="Email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Votre Email" required>
+            </div>
+
+            <div>
+                <label for="pseudo">Pseudo</label>
+                <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo">
+            </div>
+    
+            <div>
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password" id="password" placeholder="Votre mot de passe">
+            </div>
+
+                <label for="conditions-general"><input type="checkbox" name="conditions-general" id="conditions-general" required>J'accepte les conditions générales</label>
+    
+            <button class="btn-sign-up" type="button" onclick="signUp()">S'inscrire</button>
+
+            <div class="sign-up-link">
+                <p>Déjà un compte?</p><a href="sign-in.html">Se connecter</a>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-rights">
+            <p>© 2024 Harry Potter</p>
+        </div>
+    </footer>
+
+    <script src="../js/sign-up.js"></script>
+    <script src="../js/sidenav.js"></script>
+
+</body>
+</html>
